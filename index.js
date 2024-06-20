@@ -6,10 +6,10 @@ const passIndicator = document.querySelector(".pass-indicator");
 const generateBtn = document.querySelector(".generate-btn");
 
 const characters = {
-    lowercase: "aăâbcdefghiîjklmnopqrstțuvwxyz",
-    uppercase: "AĂÂBCDEFGHIÎJKLMNOPQRSTȚUVWXYZ",
+    lowercase: "aăâbcdefghiîjklmnopqrsștțuvwxyz",
+    uppercase: "AĂÂBCDEFGHIÎJKLMNOPQRSȘTȚUVWXYZ",
     numbers: "0123456789",
-    symbols: "~`!@#$%^&*()_-+=|\:;^{}[],.'",
+    symbols: "`~\`í!@#ñ$%^&*()ô_üō-ū+ïѬò=□|ÿûʫ:;ʩ^{}[],.'£€¢©¼½¾",
 }
 
 const generatePassword = () => {
@@ -23,7 +23,7 @@ const generatePassword = () => {
             if (option.id !== "exc-duplicate" && option.id !== "spaces") {
                 staticPassword += characters[option.id];
             } else if (option.id === "spaces") {
-                staticPassword += `  ${staticPassword}  `;
+                staticPassword += `${staticPassword}`;
             } else {
                 excludeDuplicate = true;
             }
@@ -58,8 +58,8 @@ const copyPassword = () => {
     copyIcon.innerText = "check";
     copyIcon.style.color = "blue";
     setTimeout(() => {
-        copyIcon.innerText = "copy_all";
-        copyIcon.style.color = "black";
+        copyIcon.innerText = "content_copy";
+        copyIcon.style.color = "blue";
     }, 1500);
 }
 
